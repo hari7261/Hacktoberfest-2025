@@ -1,0 +1,34 @@
+class Car {
+    int x = 0, y = 0; // position
+    int speed = 10;
+
+    void moveForward() {
+        y += speed;
+        System.out.println("Car moved forward to: (" + x + ", " + y + ")");
+    }
+
+    void moveBackward() {
+        y -= speed;
+        System.out.println("Car moved backward to: (" + x + ", " + y + ")");
+    }
+
+    void turnLeft() {
+        x -= speed;
+        System.out.println("Car turned left to: (" + x + ", " + y + ")");
+    }
+
+    void turnRight() {
+        x += speed;
+        System.out.println("Car turned right to: (" + x + ", " + y + ")");
+    }
+}
+
+public class ManeuverDemo {
+    public static void main(String[] args) {
+        Car car = new Car();
+        car.moveForward();
+        car.turnRight();
+        car.moveForward();
+        car.turnLeft();
+    }
+}
