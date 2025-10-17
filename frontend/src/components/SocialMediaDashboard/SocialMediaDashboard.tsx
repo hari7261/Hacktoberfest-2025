@@ -399,79 +399,109 @@ const SocialMediaDashboard: FC = () => {
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.1 }}
                 >
-                  <StatCard 
-                    icon={<Users className="w-6 h-6" />} 
-                    title="Total Followers" 
-                    value={stats.followers} 
-                    gradient="from-blue-500 to-cyan-500"
-                    loading={loading}
-                  />
+                  <motion.div
+                    whileHover={{ scale: 1.08, boxShadow: '0 8px 32px rgba(0,255,255,0.15)' }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    <StatCard 
+                      icon={<Users className="w-6 h-6" />} 
+                      title="Total Followers" 
+                      value={stats.followers} 
+                      gradient="from-blue-500 to-cyan-500"
+                      loading={loading}
+                    />
+                  </motion.div>
                 </motion.div>
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 }}
                 >
-                  <StatCard 
-                    icon={<TrendingUp className="w-6 h-6" />} 
-                    title="Engagement Rate" 
-                    value={stats.engagement} 
-                    suffix="%" 
-                    gradient="from-green-500 to-emerald-500"
-                    loading={loading}
-                  />
+                  <motion.div
+                    whileHover={{ scale: 1.08, boxShadow: '0 8px 32px rgba(0,255,127,0.15)' }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    <StatCard 
+                      icon={<TrendingUp className="w-6 h-6" />} 
+                      title="Engagement Rate" 
+                      value={stats.engagement} 
+                      suffix="%" 
+                      gradient="from-green-500 to-emerald-500"
+                      loading={loading}
+                    />
+                  </motion.div>
                 </motion.div>
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.3 }}
                 >
-                  <StatCard 
-                    icon={<Eye className="w-6 h-6" />} 
-                    title="Reach" 
-                    value={stats.reach} 
-                    gradient="from-purple-500 to-pink-500"
-                    loading={loading}
-                  />
+                  <motion.div
+                    whileHover={{ scale: 1.08, boxShadow: '0 8px 32px rgba(255,0,255,0.15)' }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    <StatCard 
+                      icon={<Eye className="w-6 h-6" />} 
+                      title="Reach" 
+                      value={stats.reach} 
+                      gradient="from-purple-500 to-pink-500"
+                      loading={loading}
+                    />
+                  </motion.div>
                 </motion.div>
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.4 }}
                 >
-                  <StatCard 
-                    icon={<MessageCircle className="w-6 h-6" />} 
-                    title="Impressions" 
-                    value={stats.impressions} 
-                    gradient="from-orange-500 to-red-500"
-                    loading={loading}
-                  />
+                  <motion.div
+                    whileHover={{ scale: 1.08, boxShadow: '0 8px 32px rgba(255,127,0,0.15)' }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    <StatCard 
+                      icon={<MessageCircle className="w-6 h-6" />} 
+                      title="Impressions" 
+                      value={stats.impressions} 
+                      gradient="from-orange-500 to-red-500"
+                      loading={loading}
+                    />
+                  </motion.div>
                 </motion.div>
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.5 }}
                 >
-                  <StatCard 
-                    icon={<Heart className="w-6 h-6" />} 
-                    title="Total Likes" 
-                    value={stats.likes} 
-                    gradient="from-pink-500 to-rose-500"
-                    loading={loading}
-                  />
+                  <motion.div
+                    whileHover={{ scale: 1.08, boxShadow: '0 8px 32px rgba(255,0,127,0.15)' }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    <StatCard 
+                      icon={<Heart className="w-6 h-6" />} 
+                      title="Total Likes" 
+                      value={stats.likes} 
+                      gradient="from-pink-500 to-rose-500"
+                      loading={loading}
+                    />
+                  </motion.div>
                 </motion.div>
                 <motion.div 
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
                 >
-                  <StatCard 
-                    icon={<Share2 className="w-6 h-6" />} 
-                    title="Shares" 
-                    value={stats.shares} 
-                    gradient="from-indigo-500 to-violet-500"
-                    loading={loading}
-                  />
+                  <motion.div
+                    whileHover={{ scale: 1.08, boxShadow: '0 8px 32px rgba(127,0,255,0.15)' }}
+                    whileTap={{ scale: 0.97 }}
+                  >
+                    <StatCard 
+                      icon={<Share2 className="w-6 h-6" />} 
+                      title="Shares" 
+                      value={stats.shares} 
+                      gradient="from-indigo-500 to-violet-500"
+                      loading={loading}
+                    />
+                  </motion.div>
                 </motion.div>
               </motion.section>
 
@@ -529,6 +559,8 @@ const SocialMediaDashboard: FC = () => {
                       initial={{ opacity: 0, x: -20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ duration: 0.5, delay: 0.1 * index }}
+                      whileHover={{ scale: 1.03, boxShadow: '0 4px 24px rgba(255,255,255,0.10)' }}
+                      whileTap={{ scale: 0.98 }}
                     >
                       <PostAnalytics post={post} />
                     </motion.div>
