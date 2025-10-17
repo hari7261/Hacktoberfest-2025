@@ -1,22 +1,21 @@
-import express from 'express';
+import dotenv from 'dotenv';
+// Load environment variables at the very top
+dotenv.config();
+
+import compression from 'compression';
 import cors from 'cors';
+import express from 'express';
 import helmet from 'helmet';
 import morgan from 'morgan';
-import compression from 'compression';
-import dotenv from 'dotenv';
-import statsRouter from "./routes/stats.routes"
-import contributorsRouter from "./routes/contributors.routes"
-import projectRouter from "./routes/projects.routes"
-import healthRouter from "./routes/health.routes"
+import authRoutes from '../src/routes/authRoutes';
 import { Middleware_404 } from './middleware/404HandlingMiddleware';
 import { errorMiddleware } from './middleware/errorHandlingMiddleware';
 import { limiter } from './middleware/rateLimiterMiddleware';
+import contributorsRouter from "./routes/contributors.routes";
+import healthRouter from "./routes/health.routes";
+import projectRouter from "./routes/projects.routes";
+import statsRouter from "./routes/stats.routes";
 
-// Import auth routes
-import authRoutes from '../src/routes/authRoutes'
-
-// Load environment variables at the very top
-dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -46,6 +45,14 @@ app.use(errorMiddleware);
 
 // The 404 handler must be the LAST middleware to catch all unhandled requests
 app.use(Middleware_404);
+
+// Passport.js setup
+if (process.env.USE_OAUTH === 'true') {
+  require('../config/passport-setup');
+  const oAuthRoutes = require('./routes/oAuthRoutes')
+
+  app.use('/api/auth', oAuthRoutes);
+}
 
 app.listen(PORT, () => {
   console.log(`🎃 Hacktoberfest 2025 API running on port ${PORT}`);

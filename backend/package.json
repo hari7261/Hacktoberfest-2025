@@ -26,7 +26,10 @@
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^7.5.0",
     "morgan": "^1.10.0",
-    "socket.io": "^4.8.1"
+    "socket.io": "^4.8.1",
+    "passport": "^0.7.0",
+    "passport-github2": "^0.1.12",
+    "passport-google-oauth20": "^2.0.0"
   },
   "devDependencies": {
     "@types/bcryptjs": "^2.4.6",
@@ -37,6 +40,9 @@
     "@types/jsonwebtoken": "^9.0.10",
     "@types/morgan": "^1.9.4",
     "@types/node": "^20.19.21",
+    "@types/passport": "^1.0.17",
+    "@types/passport-github2": "^1.2.9",
+    "@types/passport-google-oauth20": "^2.0.16",
     "@typescript-eslint/eslint-plugin": "^6.4.0",
     "@typescript-eslint/parser": "^6.4.0",
     "eslint": "^8.47.0",

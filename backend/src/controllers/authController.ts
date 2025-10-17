@@ -1,8 +1,8 @@
 import { Request, Response } from 'express';
-import { hashPassword, comparePassword, generateToken } from '../utils/auth';
+import { comparePassword, generateToken, hashPassword } from '../utils/auth';
 
 // Temporary user storage (replace with database)
-const users: any[] = [];
+export const users: any[] = [];
 
 export const register = async (req: Request, res: Response): Promise<void> => {
   try {
