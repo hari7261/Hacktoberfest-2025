@@ -1,0 +1,36 @@
+{
+  "info": {
+    "name": "FactReal",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Classify",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": { "raw": "http://127.0.0.1:8000/classify", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["classify"] },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"Elections are always rigged and the media hides the truth.\"\n}"
+        }
+      }
+    },
+    {
+      "name": "Explain",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "url": { "raw": "http://127.0.0.1:8000/explain", "protocol": "http", "host": ["127","0","0","1"], "port": "8000", "path": ["explain"] },
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"text\": \"Elections are always rigged and the media hides the truth.\",\n  \"label\": \"propaganda\"\n}"
+        }
+      }
+    }
+  ]
+}

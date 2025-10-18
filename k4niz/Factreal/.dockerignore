@@ -1,0 +1,16 @@
+.git
+.gitignore
+__pycache__
+*.pyc
+.venv
+.env
+.vscode
+.idea
+backend/data/*.csv
+backend/data/*.tsv
+backend/data/*.json
+backend/data/*.jsonl
+backend/scripts/*.sh
+backend/scripts/*.bat
+backend/scripts/*.ps1
+backend/postman
