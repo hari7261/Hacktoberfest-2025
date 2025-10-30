@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HOME</title>
+  <style>
+    *{
+  margin: 0px;
+  padding:0px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+main{
+  background-color: rgba(255, 255, 0, 0.938);
+}
+header{
+  color: darkred;
+  background-color: lightcoral;
+  height: 75px;
+  display: flex;
+  justify-content: space-around;
+  align-items: end; 
+}
+ #share, #setting{
+  height:30px;
+  width:30px;
+  font-size: large;
+  font-weight: bold;
+ }
+article{
+  width: 490px;
+  height: 400px;
+  background-color: lavenderblush;
+  border: 2px dashed darkred;
+  border-radius: 70px;
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items: center;
+  position: relative;
+  left: 30%;
+}
+.rule{
+  text-transform: capitalize;
+  height: 50px;
+  color: mintcream;
+}
+#r3, #r4, #r5{
+  border: 2px solid black;
+  border-radius: 10px;
+}
+#r1{
+  background-color: darkslateblue;
+}
+#r2{
+  background-color:  darkslategray;
+}
+#r3{
+  background-color:darkturquoise;
+}
+#r4{
+  background-color: mediumslateblue;
+}
+#r5{
+  background-color:  teal;
+}
+.container{
+  background-color: navajowhite;
+  display: flex;  
+  justify-content: space-between;
+  align-items: end;
+  margin: 5px;
+  position: relative;
+}
+.box{
+  background-color: navy ;
+  font-weight: bold;
+  color: mintcream;
+  text-align: center;
+  height: 60px;
+  width: 110px;
+  border: 2px solid black;
+  border-radius: 10px;
+  box-sizing: content-box;
+}
+footer{
+  background-color: lightcyan;
+}
+  </style>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+  <body>
+  <header>
+    <nav class="nav_bar">
+      <h1>
+          <u>WELCOME! To HEALHUB!</u>
+      </h1>
+    </div>
+      <!-- <div class="icons"> -->
+       <button>
+        <i id="share" class="fa-solid fa-share-nodes"></i>
+       </button>
+       <button>
+        <i id="setting" class="fa-solid fa-gear"></i>
+       </button>
+      </nav>
+  </header>
+  <main>
+   <article>
+    <h2>
+     <form>
+      <input type="checkbox" id="w" value="schedule1">
+       <lable for="wake up! It's morning now" class="rule" id="r1">wake up! It's morning now</lable>
+       <br><br>
+       <input type="checkbox" id="detail2" value="schedule2">
+        <lable for="Drink a glass of luke warm water" class="rule" id="r2">Drink a glass of luke walm water</lable>
+        <br>
+        <br>
+        <input type="checkbox" id="detail3" value="schedule3">
+        <button class="rule" id="r3">EXERCISE</button>
+        <br>
+        <br>
+        <input type="checkbox" id="detail4" value="schedule4">
+        <button class="rule" id="r4">MEDITATE NOW</button>
+        <br><br>
+        <input type="checkbox" id="detail5" value="schedule5">
+        <button class="rule" id="r5">PLAY SOOTHING MUSIC</button>
+        <br><br>
+     </form> 
+     </h2>
+   </article>
+  <br>
+   <div class="container">
+     <button id="box1" class="box">HOME</button>
+     <button id="box2" class="box">MEDITATION & SPRTITUALITY</button>
+     <button id="box3" class="box">EXERCISE</button>
+     <button id="box4" class="box">MUSIC</button>
+     <button id="box5" class="box">DIARY</button>
+     <button id="box6" class="box">CONNECT WITH EXPERT</button>
+     <button id="box7" class="box">INSIGHT</button>
+   </div>
+  </main>
+  <footer></footer>
+</body>
+</html>
+</head>
